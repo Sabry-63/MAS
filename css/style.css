@@ -1,0 +1,139 @@
+/*
+    1-Global Style
+    2-Header Style
+        2.1- Upper Navbar
+        2.2- Navbar
+        2.3- info-list 
+        2.4- video header
+*/
+/* -------------------------
+1- Global Style */
+body{
+    text-transform: capitalize;
+}
+
+:root{
+    --main-color: #4B77BE;
+    --heading-color: #003171;
+    --wight: #fff;
+    --gray: #888
+}
+ul,
+ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+p{
+    line-height: 1.7;
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+/* ------------------------------
+2- Start Header Style*/
+/* ------------------------------
+2.1- Upper Navbar */
+.upper-nav {
+    background-color: var(--heading-color);
+}
+.upper-nav p{
+    padding: 10px;
+    margin: 0;
+    color: var(--wight)
+}
+/* ------------------------------
+2.2- Navbar */
+nav ul li a{
+    color: #000
+}
+nav ul li a:hover{
+    opacity: .9;
+}
+.active{
+    position: relative;
+}
+.active::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 7px 8px;
+    border-color: transparent transparent var(--heading-color) transparent!important;
+    display: block;
+    position: absolute;
+    bottom: -8px;
+    left: calc(50% - 9px);
+    opacity: 1;
+
+}
+/* --------------------------------
+2.3- info-list */
+.info-list {
+    background-color: var(--heading-color);
+    box-shadow: 0 5px 4px 0px rgba(43, 43, 43, 0.5);
+    
+}
+.info-list ul li{
+    display: inline-block;
+    padding: 10px 0;
+}
+.info-list ul li a{
+    color: var(--wight);
+    padding: 0 0.5rem;
+}
+.info-list ul li a:hover{
+    opacity: .9;
+}
+/* --------------------------------
+2.4- video header */
+.mas-vid {
+    position: relative;
+    background-color: var(--heading-color);
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+.mas-vid .overlay {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.mas-vid video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.mas-vid .info-head {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mas-vid .info-head h1{
+    color: var(--wight);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.mas-vid .info-head p{
+    color: var(--wight);
+}
+/* ------------------------------
+End Header Style*/
