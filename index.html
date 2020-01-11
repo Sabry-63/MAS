@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,35 +15,42 @@
     <!-- Style-File -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <!-- Start Header -->
     <header>
 
-       <!-- Start-Upper Nav -->
+        <!-- Start-Upper Nav -->
         <div class="upper-nav">
             <p class="text-center">Lorem ipsum dolor sit amet.</p>
         </div>
         <!-- End-Upper Nav -->
 
         <!-- Start-Nav -->
-        <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Men</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"  href="#">Women</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"  href="#">Children</a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-light text-center">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Men</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Women</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Children</a>
+                        </li>
+                    </ul>
+                </div>
                 <a class="navbar-brand" href="#">Logo</a>
-            </div>  <!-- ./container -->
+            </div>
         </nav>
+
         <!-- End-Nav -->
 
         <!-- Start Intro -->
@@ -71,14 +79,64 @@
             </video>
             <div class="info-head text-center">
                 <h1>Mas</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem natus delectus consectetur nisi architecto quia voluptatibus ducimus deserunt corrupti similique.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem natus delectus consectetur nisi
+                    architecto quia voluptatibus ducimus deserunt corrupti similique.</p>
             </div>
         </section>
         <!-- End MAS-Video-->
 
     </header>
     <!-- End Header -->
-    
+
+    <!-- Start Category -->
+    <section class="category py-5">
+        <div class="container">
+            <div class="box-category">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="category-item one"></div>
+                        <div class="info-box-category">
+                            <h2 class="title-box">For Men</h2>
+                            <p class="desc-box">Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="category-item tow"></div>
+                        <div class="info-box-category">
+                            <h2 class="title-box">For Men</h2>
+                            <p class="desc-box">Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </div> <!-- ./row -->
+                <div class="row pt-4">
+                    <div class="col-lg-4 col-12">
+                        <div class="category-item three"></div>
+                        <div class="info-box-category">
+                            <h2 class="title-box">For Men</h2>
+                            <p class="desc-box">Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <div class="category-item for"></div>
+                        <div class="info-box-category">
+                            <h2 class="title-box">For Men</h2>
+                            <p class="desc-box">Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <div class="category-item five"></div>
+                        <div class="info-box-category">
+                            <h2 class="title-box">For Men</h2>
+                            <p class="desc-box">Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </div> <!-- ./row -->
+
+            </div> <!-- ./item -->
+        </div> <!-- ./box -->
+        </div> <!-- ./container -->
+    </section>
+    <!-- End Category -->
 
     <!-- Libilry-Jquery -->
     <script src="js/vandors/jquery.js"></script>
@@ -89,4 +147,5 @@
     <!-- Script-File -->
     <script src="js/main.js"></script>
 </body>
+
 </html>
