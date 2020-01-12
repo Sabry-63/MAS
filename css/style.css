@@ -92,6 +92,11 @@ input::placeholder {
 .navbar {
     position: relative;
 }
+.navbar-light .navbar-brand {
+    position: absolute;
+    right: 20px;
+    top: 5px 
+}
 .active {
     position: relative;
 }
@@ -110,7 +115,7 @@ input::placeholder {
 }
 @media (max-width: 992px) {
     .active::before {
-        display: none;
+        border: none;
     }
 }
 /* --------------------------------
@@ -293,15 +298,17 @@ End Category */
 }
 .sup-info .sup-input input {
     width: 80%;
-    padding: 9px 15px;
+    padding: 15px;
     border: none;
     border: 1px solid var(--red);
     border-radius: 5px 0 0 5px;
     outline: none;
 }
 .sup-info .sup-input button {
-    width: 20%;
+    width: 40%;
     border-radius: 0 5px 5px 0;
+    padding: 12px;
+    border-left: none
 }
 /* ------------------------------
 End Supscribe */
