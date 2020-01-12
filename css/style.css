@@ -1,24 +1,30 @@
 /*
     1-Global Style
+        1.1- Title Section
+        1.2- Button Style 
     2-Header Style
         2.1- Upper Navbar
         2.2- Navbar
         2.3- info-list 
         2.4- video header
     3-Category Style
+    4-Strat Supscribe
+        4.1- Supscribe Images
+        4.2- Supscribe Info
+    -Footer Style
 */
 /* -------------------------
-1- Global Style */
+1- Start Global Style */
 body {
     text-transform: capitalize;
-    height: 6000px;
 }
 
 :root {
-    --main-color: #4b77be;
-    --heading-color: #003171;
+    --main-color: #f1f1f1;
     --wight: #fff;
     --gray: #888;
+    --red: #f00;
+    --blcak: #2d2d2d;
 }
 ul,
 ol {
@@ -29,16 +35,52 @@ ol {
 p {
     line-height: 1.7;
 }
+a {
+    transition: opacity 0.3s;
+}
 a:hover {
     text-decoration: none;
+    opacity: 0.8;
 }
+input::placeholder {
+    color: var(--gray);
+}
+/*-------------------------------
+1.1 Start Title Section Style */
+.title-section .head-title {
+    position: relative;
+}
+.title-section .head-title::after {
+    content: "";
+    display: block;
+    margin: 10px auto;
+    width: 100px;
+    height: 3px;
+    background-color: var(--red);
+    border-radius: 50%;
+    box-shadow: 1px 4px 5px 2px rgba(228, 104, 104, 0.5);
+}
+/*-------------------------------
+1.2 Button Style */
+.btn-style {
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    color: var(--wight);
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-style:hover {
+    background-color: var(--wight);
+    color: var(--red);
+}
+/* -------------------------
+1- End Global */
 
 /* ------------------------------
 2- Start Header Style*/
 /* ------------------------------
 2.1- Upper Navbar */
 .upper-nav {
-    background-color: var(--heading-color);
+    background-color: var(--blcak);
 }
 .upper-nav p {
     padding: 10px;
@@ -50,12 +92,6 @@ a:hover {
 .navbar {
     position: relative;
 }
-nav ul li a {
-    color: #000;
-}
-nav ul li a:hover {
-    opacity: 0.9;
-}
 .active {
     position: relative;
 }
@@ -65,7 +101,7 @@ nav ul li a:hover {
     height: 0;
     border-style: solid;
     border-width: 0 7px 8px;
-    border-color: transparent transparent var(--heading-color) transparent !important;
+    border-color: transparent transparent var(--blcak) transparent !important;
     display: block;
     position: absolute;
     bottom: -8px;
@@ -80,7 +116,7 @@ nav ul li a:hover {
 /* --------------------------------
 2.3- info-list */
 .info-list {
-    background-color: var(--heading-color);
+    background-color: var(--blcak);
     box-shadow: 0 5px 4px 0px rgba(43, 43, 43, 0.5);
 }
 .info-list ul li {
@@ -98,7 +134,7 @@ nav ul li a:hover {
 2.4- video header */
 .mas-vid {
     position: relative;
-    background-color: var(--heading-color);
+    background-color: var(--main-color);
     height: 100vh;
     min-height: 25rem;
     width: 100%;
@@ -147,37 +183,37 @@ End Header Style */
 
 /* ------------------------------
 Start Category */
-.box-category  .category-item{
+.box-category .category-item {
     height: 300px;
     position: relative;
-    transition: box-shadow .3s;
+    transition: box-shadow 0.3s;
 }
-.category .category-item:hover{
-    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, .3);
+.category .category-item:hover {
+    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.3);
 }
-.box-category  .category-item.one{
+.box-category .category-item.one {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/category/1.jpg") no-repeat center center;
+        url("../images/category/1.jpg") no-repeat center center;
     background-size: cover;
 }
-.box-category  .category-item.tow{
+.box-category .category-item.tow {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/category/2.jpg") no-repeat center center;
+        url("../images/category/2.jpg") no-repeat center center;
     background-size: cover;
 }
-.box-category  .category-item.three{
+.box-category .category-item.three {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/category/3.jpg") no-repeat center center;
+        url("../images/category/3.jpg") no-repeat center center;
     background-size: cover;
 }
-.box-category  .category-item.for{
+.box-category .category-item.for {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/category/4.jpg") no-repeat center center;
+        url("../images/category/4.jpg") no-repeat center center;
     background-size: cover;
 }
-.box-category  .category-item.five{
+.box-category .category-item.five {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/category/5.jpg") no-repeat center center;
+        url("../images/category/5.jpg") no-repeat center center;
     background-size: cover;
 }
 .category .info-box-category {
@@ -194,3 +230,113 @@ Start Category */
 }
 /* ------------------------------
 End Category */
+
+/* ------------------------------
+4- Strat Supscribe Style */
+
+/* -----------------------------
+4.1- sup-images*/
+.sup-images {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+.sup-images .sup-item-img {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 140px;
+    width: 100%;
+}
+.sup-images .sup-item-img:nth-child(1) {
+    background-image: url("../images/supscribe/1.jpg");
+}
+.sup-images .sup-item-img:nth-child(2) {
+    background-image: url("../images/supscribe/2.jpg");
+}
+.sup-images .sup-item-img:nth-child(3) {
+    background-image: url("../images/supscribe/3.jpg");
+}
+.sup-images .sup-item-img:nth-child(4) {
+    background-image: url("../images/supscribe/4.jpg");
+}
+.sup-images .sup-item-img:nth-child(5) {
+    background-image: url("../images/supscribe/1.jpg");
+}
+.sup-images .sup-item-img:nth-child(6) {
+    background-image: url("../images/supscribe/2.jpg");
+}
+.sup-images .sup-item-img:nth-child(7) {
+    background-image: url("../images/supscribe/3.jpg");
+}
+.sup-images .sup-item-img:nth-child(8) {
+    background-image: url("../images/supscribe/4.jpg");
+}
+@media(max-width: 992px){
+    .sup-images{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/* ------------------------------
+4.2- Supscribe Info */
+.sup-info {
+    background-color: var(--main-color);
+}
+.sup-info .sup-input {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.sup-info .sup-input input {
+    width: 80%;
+    padding: 9px 15px;
+    border: none;
+    border: 1px solid var(--red);
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.sup-info .sup-input button {
+    width: 20%;
+    border-radius: 0 5px 5px 0;
+}
+/* ------------------------------
+End Supscribe */
+
+/* ------------------------------
+-Start Footer Style */
+footer {
+    background-color: var(--blcak);
+    color: var(--main-color);
+}
+/* ------------------------------
+.1- Media Style */
+footer .title-footer h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+footer .media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .media a {
+    color: var(--gray);
+}
+footer .media i {
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+    font-size: 25px;
+}
+/* ------------------------------
+.2- Footer List */
+.footer-list {
+    text-align: center;
+}
+.footer-list ul li {
+    margin: 10px 0;
+}
+.footer-list ul li a {
+    color: var(--gray);
+}
+/* ------------------------------
+End Footer */
