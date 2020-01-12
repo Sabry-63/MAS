@@ -228,6 +228,11 @@ Start Category */
 .category .info-box-category .desc-box {
     color: var(--wight);
 }
+@media(max-width: 992px){
+    .box-category .category-item{
+       margin: 10px 0;
+    }
+}
 /* ------------------------------
 End Category */
 
