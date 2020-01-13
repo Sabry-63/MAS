@@ -7,11 +7,17 @@
         2.2- Navbar
         2.3- info-list 
         2.4- video header
-    3-Category Style
-    4-Strat Supscribe
-        4.1- Supscribe Images
-        4.2- Supscribe Info
-    -Footer Style
+    3-Start Over Style
+    4-Category Style
+    5-PRODUCTS Style 
+    6-INFORMATION Style
+    7-LATEST NEWS
+    8-Strat Supscribe
+        8.1- Supscribe Images
+        8.2- Supscribe Info
+    9-Footer Style
+        9.1- Media Style 
+        9.2- Footer List
 */
 /* -------------------------
 1- Start Global Style */
@@ -187,7 +193,18 @@ input::placeholder {
 End Header Style */
 
 /* ------------------------------
-Start Category */
+3- Start Over Style */
+.over{
+    background-color: var(--main-color);
+}
+.over h2 span{
+    color: var(--red)
+}
+/* ------------------------------
+End Over Style */
+
+/* ------------------------------
+4- Start Category */
 .box-category .category-item {
     height: 300px;
     position: relative;
@@ -242,10 +259,109 @@ Start Category */
 End Category */
 
 /* ------------------------------
-4- Strat Supscribe Style */
+5- Start PRODUCTS Style */
+.products .item-products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+.products .items-products {
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: border .3s
+}
+.products .items-products:hover{
+    border: 1px solid var(--gray);
+}
+.products .items-products img{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 10px;
+    transition: box-shadow .3s;
+}
+.products .items-products:hover img{
+    box-shadow: 0px 5px 1px 1px #c1b8b8;
+}
+.products .items-products .link-prod{
+    margin: 10px 0;
+    display: block;
+    font-size: 12px;
+    color: var(--red);
+    border-top: 1px solid var(--gray);
+}
+.products .items-products p{
+    font-size: 14px;
+    color: var(--gray)
+}
+/* ------------------------------
+End PRODUCTS */
 
+/* ------------------------------
+6-Start INFORMATION Style */
+.infor .item-box{
+    display: flex;
+}
+.infor .items-box{
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
+    flex: 1;
+}
+.head-items-box{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.head-items-box h4,
+.head-items-box p{
+    color: var(--wight);
+}
+.head-items-box .sup-input{
+    justify-content: center;
+}
+.infor .items-box:nth-child(1){
+    background-image: url('../images/INFORMATION/10.jpg');
+}
+.infor .items-box:nth-child(2){
+    background-image: url('../images/INFORMATION/11.jpg');
+}
+.infor .items-box:nth-child(3){
+    background-image: url('../images/INFORMATION/9.jpg');
+}
+/* ------------------------------
+End INFORMATION */
+
+/* ------------------------------
+7-Start LATEST NEWS */
+.latest .item-slider{
+    padding: 10px;
+}
+.latest .item-slider img{
+    width: 100%;
+    height: 350px;
+    box-shadow: 0px 5px 8px 0px rgba(118, 93, 93, 0.5);
+}
+.latest .item-slider span{
+    display: block;
+    color: var(--gray);
+    margin: 5px 0;
+
+}
+.latest .item-slider a{
+    color: var(--red)
+}
+/* ------------------------------
+End LATEST NEWS */
+
+/* ------------------------------
+8- Strat Supscribe Style */
 /* -----------------------------
-4.1- sup-images*/
+8.1- sup-images*/
 .sup-images {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -287,7 +403,7 @@ End Category */
     }
 }
 /* ------------------------------
-4.2- Supscribe Info */
+8.2- Supscribe Info */
 .sup-info {
     background-color: var(--main-color);
 }
@@ -314,13 +430,13 @@ End Category */
 End Supscribe */
 
 /* ------------------------------
--Start Footer Style */
+9-Start Footer Style */
 footer {
     background-color: var(--blcak);
     color: var(--main-color);
 }
 /* ------------------------------
-.1- Media Style */
+9.1- Media Style */
 footer .title-footer h2 {
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -340,7 +456,7 @@ footer .media i {
     font-size: 25px;
 }
 /* ------------------------------
-.2- Footer List */
+9.2- Footer List */
 .footer-list {
     text-align: center;
 }
