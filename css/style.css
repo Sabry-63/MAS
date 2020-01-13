@@ -293,13 +293,19 @@ End Category */
     font-size: 14px;
     color: var(--gray)
 }
+@media(max-width: 992px){
+    .products .item-products{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 /* ------------------------------
 End PRODUCTS */
 
 /* ------------------------------
 6-Start INFORMATION Style */
 .infor .item-box{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .infor .items-box{
     position: relative;
@@ -332,6 +338,11 @@ End PRODUCTS */
 }
 .infor .items-box:nth-child(3){
     background-image: url('../images/INFORMATION/9.jpg');
+}
+@media(max-width: 992px){
+    .infor .item-box{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 /* ------------------------------
 End INFORMATION */
