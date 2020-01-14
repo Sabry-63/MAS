@@ -315,7 +315,6 @@ End PRODUCTS */
     background-repeat: no-repeat;
     background-position: center;
     height: 350px;
-    flex: 1;
 }
 .head-items-box{
     width: 80%;
@@ -368,6 +367,11 @@ End INFORMATION */
 .latest .item-slider a{
     color: var(--red)
 }
+@media(max-width: 992px){
+    .latest .item-slider{
+        width: 350px !important;
+    }
+}
 /* ------------------------------
 End LATEST NEWS */
 
@@ -399,16 +403,16 @@ End LATEST NEWS */
     background-image: url("../images/supscribe/4.jpg");
 }
 .sup-images .sup-item-img:nth-child(5) {
-    background-image: url("../images/supscribe/1.jpg");
+    background-image: url("../images/supscribe/4.jpg");
 }
 .sup-images .sup-item-img:nth-child(6) {
-    background-image: url("../images/supscribe/2.jpg");
-}
-.sup-images .sup-item-img:nth-child(7) {
     background-image: url("../images/supscribe/3.jpg");
 }
+.sup-images .sup-item-img:nth-child(7) {
+    background-image: url("../images/supscribe/2.jpg");
+}
 .sup-images .sup-item-img:nth-child(8) {
-    background-image: url("../images/supscribe/4.jpg");
+    background-image: url("../images/supscribe/1.jpg");
 }
 @media(max-width: 992px){
     .sup-images{
