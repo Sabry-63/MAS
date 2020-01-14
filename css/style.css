@@ -180,6 +180,7 @@ input::placeholder {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 80%
 }
 .mas-vid .info-head h1 {
     color: var(--wight);
@@ -423,7 +424,8 @@ End LATEST NEWS */
     align-items: center;
     margin-top: 20px;
 }
-.sup-info .sup-input input {
+.sup-info .sup-input input,
+.head-items-box .sup-input input {
     width: 80%;
     padding: 15px;
     border: none;
@@ -431,7 +433,8 @@ End LATEST NEWS */
     border-radius: 5px 0 0 5px;
     outline: none;
 }
-.sup-info .sup-input button {
+.sup-info .sup-input button ,
+.head-items-box .sup-input button {
     width: 40%;
     border-radius: 0 5px 5px 0;
     padding: 12px;
