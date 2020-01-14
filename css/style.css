@@ -105,6 +105,7 @@ input::placeholder {
 }
 .active {
     position: relative;
+    color: var(--red) !important
 }
 .active::before {
     content: "";
