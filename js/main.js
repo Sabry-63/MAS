@@ -55,9 +55,13 @@ $(function() {
     });
 
     /* calling script */
-    $(".xzoom, .xzoom-gallery").xzoom({
-        tint: "#333",
-        Xoffset: 5 ,
-        openOnSmall: true
+    $(".xzoom-5, .xzoom-gallery").xzoom({
+        position: "lens",
+        lensShape: "circle",
+        zoomWidth: 400,
+        zoomHeight: 400,
+        tint: '#000',
+        tintOpacity: 0.5,
+        lensOpacity: 0.5,
     });
 });
