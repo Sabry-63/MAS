@@ -19,6 +19,8 @@
         9.1- Media Style 
         9.2- Footer List
     10-Page Product
+    11-Page Item Product Style 
+    12-Page Contact Style
 */
 /* -------------------------
 1- Start Global Style */
@@ -102,13 +104,13 @@ input::placeholder {
 .navbar-light .navbar-brand {
     position: absolute;
     right: 20px;
-    top: 5px 
+    top: 5px;
 }
 .navbar-light .active {
     position: relative;
-    color: var(--red) !important
+    color: var(--red) !important;
 }
-.navbar-light  .active::before {
+.navbar-light .active::before {
     content: "";
     width: 0;
     height: 0;
@@ -182,7 +184,7 @@ input::placeholder {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%
+    width: 80%;
 }
 .mas-vid .info-head h1 {
     color: var(--wight);
@@ -197,11 +199,11 @@ End Header Style */
 
 /* ------------------------------
 3- Start Over Style */
-.over{
+.over {
     background-color: var(--main-color);
 }
-.over h2 span{
-    color: var(--red)
+.over h2 span {
+    color: var(--red);
 }
 /* ------------------------------
 End Over Style */
@@ -253,9 +255,9 @@ End Over Style */
 .category .info-box-category .desc-box {
     color: var(--wight);
 }
-@media(max-width: 992px){
-    .box-category .category-item{
-       margin: 10px 0;
+@media (max-width: 992px) {
+    .box-category .category-item {
+        margin: 10px 0;
     }
 }
 /* ------------------------------
@@ -263,7 +265,7 @@ End Category */
 
 /* ------------------------------
 5- Start PRODUCTS Style */
-.products .item-products{
+.products .item-products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
@@ -271,33 +273,33 @@ End Category */
 .products .items-products {
     padding: 10px;
     border: 1px solid transparent;
-    transition: border .3s
+    transition: border 0.3s;
 }
-.products .items-products:hover{
+.products .items-products:hover {
     border: 1px solid var(--gray);
 }
-.products .items-products img{
+.products .items-products img {
     width: 100%;
     height: 350px;
     margin-bottom: 10px;
-    transition: box-shadow .3s;
+    transition: box-shadow 0.3s;
 }
-.products .items-products:hover img{
+.products .items-products:hover img {
     box-shadow: 0px 5px 1px 1px #c1b8b8;
 }
-.products .items-products .link-prod{
+.products .items-products .link-prod {
     margin: 10px 0;
     display: block;
     font-size: 12px;
     color: var(--red);
     border-top: 1px solid var(--gray);
 }
-.products .items-products p{
+.products .items-products p {
     font-size: 14px;
-    color: var(--gray)
+    color: var(--gray);
 }
-@media(max-width: 992px){
-    .products .item-products{
+@media (max-width: 992px) {
+    .products .item-products {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -306,18 +308,18 @@ End PRODUCTS */
 
 /* ------------------------------
 6-Start INFORMATION Style */
-.infor .item-box{
+.infor .item-box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-.infor .items-box{
+.infor .items-box {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 350px;
 }
-.head-items-box{
+.head-items-box {
     width: 80%;
     position: absolute;
     top: 50%;
@@ -326,23 +328,23 @@ End PRODUCTS */
     text-align: center;
 }
 .head-items-box h4,
-.head-items-box p{
+.head-items-box p {
     color: var(--wight);
 }
-.head-items-box .sup-input{
+.head-items-box .sup-input {
     justify-content: center;
 }
-.infor .items-box:nth-child(1){
-    background-image: url('../images/INFORMATION/10.jpg');
+.infor .items-box:nth-child(1) {
+    background-image: url("../images/INFORMATION/10.jpg");
 }
-.infor .items-box:nth-child(2){
-    background-image: url('../images/INFORMATION/11.jpg');
+.infor .items-box:nth-child(2) {
+    background-image: url("../images/INFORMATION/11.jpg");
 }
-.infor .items-box:nth-child(3){
-    background-image: url('../images/INFORMATION/9.jpg');
+.infor .items-box:nth-child(3) {
+    background-image: url("../images/INFORMATION/9.jpg");
 }
-@media(max-width: 992px){
-    .infor .item-box{
+@media (max-width: 992px) {
+    .infor .item-box {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -351,25 +353,24 @@ End INFORMATION */
 
 /* ------------------------------
 7-Start LATEST NEWS */
-.latest .item-slider{
+.latest .item-slider {
     padding: 10px;
 }
-.latest .item-slider img{
+.latest .item-slider img {
     width: 100%;
     height: 350px;
     box-shadow: 0px 5px 8px 0px rgba(118, 93, 93, 0.5);
 }
-.latest .item-slider span{
+.latest .item-slider span {
     display: block;
     color: var(--gray);
     margin: 5px 0;
-
 }
-.latest .item-slider a{
-    color: var(--red)
+.latest .item-slider a {
+    color: var(--red);
 }
-@media(max-width: 992px){
-    .latest .item-slider{
+@media (max-width: 992px) {
+    .latest .item-slider {
         width: 350px !important;
     }
 }
@@ -415,8 +416,8 @@ End LATEST NEWS */
 .sup-images .sup-item-img:nth-child(8) {
     background-image: url("../images/supscribe/1.jpg");
 }
-@media(max-width: 992px){
-    .sup-images{
+@media (max-width: 992px) {
+    .sup-images {
         grid-template-columns: repeat(4, 1fr);
     }
 }
@@ -439,12 +440,12 @@ End LATEST NEWS */
     border-radius: 5px 0 0 5px;
     outline: none;
 }
-.sup-info .sup-input button ,
+.sup-info .sup-input button,
 .head-items-box .sup-input button {
     width: 40%;
     border-radius: 0 5px 5px 0;
     padding: 12px;
-    border-left: none
+    border-left: none;
 }
 /* ------------------------------
 End Supscribe */
@@ -490,20 +491,20 @@ footer .media i {
 End Footer */
 
 /* ------------------------------
-10-Start Page Product */ 
+10-Start Page Product */
 .item-page {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
 }
-.item-page img{
+.item-page img {
     height: 300px;
-    transition: box-shadow .3s;
+    transition: box-shadow 0.3s;
 }
-.item-page .card:hover img{
+.item-page .card:hover img {
     box-shadow: 0 5px 4px 0px rgba(43, 43, 43, 0.5);
 }
-@media(max-width: 992px){
+@media (max-width: 992px) {
     .item-page {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -512,23 +513,58 @@ End Footer */
 End Page Product */
 
 /* ------------------------------
-Start Page Item Product */
-.page-item .box-item span{
-    color: var(--red)
+11-Start Page Item Product */
+.page-item .box-item span {
+    color: var(--red);
 }
-.page-item .box-item label{
+.page-item .box-item label {
     font-size: 12px;
-    color: var(--gray)
+    color: var(--gray);
 }
-.page-item .box-item .num-inp{
+.page-item .box-item .num-inp {
     width: 12%;
     padding: 6px;
 }
-.page-item .box-item .btn-style{
+.page-item .box-item .btn-style {
     width: 80%;
 }
-
-
-
 /* ------------------------------
 End Page Item Product */
+
+/* ------------------------------
+11-Start Page Contact */
+.page-contact .box-form {
+    position: relative;
+    width: 80%;
+    margin: 10px auto;
+}
+.page-contact .box-form .btn-form,
+.page-contact .box-form textarea {
+    position: relative;
+    width: 100%;
+    padding: 7px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--blcak);
+}
+.page-contact .box-form textarea {
+    max-height: 200px;
+    min-height: 200px;
+}
+.page-contact .box-form i {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    color: var(--gray);
+}
+.page-contact i.fa-telegram-plane {
+    color: var(--wight);
+    top: 10px;
+}
+.page-contact .box-form .btn-style{
+    width: 80%;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+/* ------------------------------
+End Page Contact */
