@@ -130,10 +130,13 @@ input::placeholder {
     }
     .popup .content-popup .item-popup img {
         width: 100%;
-        height: auto;
+        height: 300px;
     }
     .popup .content-popup .item-popup h3{
         margin-top: 20px;
+    }
+    .popup .sup-input input{
+        width: 100%;
     }
 }
 /*-------------------------------
