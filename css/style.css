@@ -135,6 +135,9 @@ input::placeholder {
     .popup .content-popup .item-popup h3{
         margin-top: 20px;
     }
+    .popup .sup-input {
+        margin: 20px 0;
+    }
     .popup .sup-input input{
         width: 100%;
     }
