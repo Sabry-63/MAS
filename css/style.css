@@ -141,6 +141,15 @@ input::placeholder {
     .popup .sup-input input{
         width: 100%;
     }
+    .popup .content-popup .fa-times {
+        background-color: var(--blcak);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: var(--red)
+    }
 }
 /*-------------------------------
 1.4 Scroll Top Style */
