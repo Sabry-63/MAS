@@ -54,14 +54,45 @@ $(function() {
         ]
     });
 
+    //Window Scroll
+    $(window).scroll(function() {
+        //scroll To Top Button
+        if ($(window).scrollTop() >= $(window).height()) {
+            $(".scroll-top i").fadeIn(500);
+        } else {
+            $(".scroll-top i").fadeOut(200);
+        }
+    });
+
+    // Pop up
+    $(".fa-times").click(function() {
+        $(".popup").fadeOut();
+    });
+    $(document).keydown(function(e) {
+        if (e.keyCode === 27) {
+            $(".popup").fadeOut();
+        }
+    });
+
+    //click button go to top
+    $(".scroll-top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate(
+            {
+                scrollTop: 0
+            },
+            1000
+        );
+    });
+
     /* calling script */
     $(".xzoom-5, .xzoom-gallery").xzoom({
         position: "lens",
         lensShape: "circle",
         zoomWidth: 400,
         zoomHeight: 400,
-        tint: '#000',
+        tint: "#000",
         tintOpacity: 0.5,
-        lensOpacity: 0.5,
+        lensOpacity: 0.5
     });
 });
