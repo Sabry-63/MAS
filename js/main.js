@@ -3,7 +3,8 @@
 $(function() {
     "use strict";
     // active class nav
-    $(".navbar-nav .nav-link").click(function() {
+    $(".navbar-nav .nav-link").click(function(e) {
+        e.preventDefault();
         $(this)
             .parent(".nav-item")
             .siblings()
@@ -15,10 +16,9 @@ $(function() {
     // hieght video header
     var winH = $(window).height(),
         upperH = $(".upper-nav").innerHeight(),
-        down = $(".info-list").innerHeight(),
         navH = $(".navbar").innerHeight();
 
-    $(".mas-vid").height(winH - (upperH + down + navH));
+    $(".mas-vid").height(winH - (upperH  + navH));
 
     // Slick Plagen
     $(".slider").slick({
@@ -83,6 +83,14 @@ $(function() {
             },
             1000
         );
+    });
+
+    //Toggle Sections
+    $('.navbar-nav .nav-link').click(function (e) {
+         e.preventDefault();
+        $('.block').hide();
+        $($(this).data('targets')).addClass('block').siblings().removeClass('block');
+        $($(this).data('targets')).fadeIn('slow');
     });
 
     /* calling script */
