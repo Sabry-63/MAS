@@ -92,15 +92,22 @@ $(function() {
         $($(this).data('targets')).addClass('block').siblings().removeClass('block');
         $($(this).data('targets')).fadeIn('slow');
     });
-
+    
+    // Aos Start
+     AOS.init();
+    
     /* calling script */
     $(".xzoom-5, .xzoom-gallery").xzoom({
-        position: "lens",
         lensShape: "circle",
-        zoomWidth: 400,
-        zoomHeight: 400,
+        zoomWidth: 250,
+        zoomHeight: 250,
         tint: "#000",
         tintOpacity: 0.5,
-        lensOpacity: 0.5
+        lensOpacity: 0.5,
+        mposition: "fullscreen",
+        scroll: true,
+        openOnSmall: true,
+        Xoffset: 5,
+        Yoffset: 3
     });
 });
