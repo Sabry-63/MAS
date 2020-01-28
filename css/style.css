@@ -345,27 +345,27 @@ End Over Style */
 }
 .box-category .category-item.one {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../images/category/1.jpg") no-repeat center center;
+        url("../images/products/women/1.jpg") no-repeat;
     background-size: cover;
 }
 .box-category .category-item.tow {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../images/category/2.jpg") no-repeat center center;
+        url("../images/products/child/1.jpg") no-repeat;
     background-size: cover;
 }
 .box-category .category-item.three {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../images/category/3.jpg") no-repeat center center;
+        url("../images/products/men/1.jpg") no-repeat;
     background-size: cover;
 }
 .box-category .category-item.for {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../images/category/4.jpg") no-repeat center center;
+        url("../images/products/men/2.jpg") no-repeat;
     background-size: cover;
 }
 .box-category .category-item.five {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../images/category/5.jpg") no-repeat center center;
+        url("../images/products/men/3.jpg") no-repeat;
     background-size: cover;
 }
 .category .info-box-category {
@@ -626,6 +626,36 @@ End Footer */
 
 /* ------------------------------
 10-Start Page Product */
+header .gb-prodect{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    position: relative;
+}
+header .men{
+    background-image:linear-gradient(rgba(0, 0, 0 ,.5), rgba(0, 0, 0, .5)),
+     url('../images/products/header/mens.jpg');
+}
+header .child{
+    background-image:linear-gradient(rgba(0, 0, 0 ,.5), rgba(0, 0, 0, .5)),
+    url('../images/products/header/children.jpg');
+    background-position: center center;
+    background-size: contain;
+}
+header .women{
+    background-image:linear-gradient(rgba(0, 0, 0 ,.5), rgba(0, 0, 0, .5)),
+    url('../images/products/header/women.jpeg');
+}
+header .title-bg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--wight);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 50px;
+}
 .item-page {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
