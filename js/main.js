@@ -3,14 +3,18 @@
 $(function() {
     "use strict";
     // active class nav
-    $(".navbar-nav .nav-link").click(function(e) {
-        e.preventDefault();
+    $(".navbar-nav .nav-link").click(function() {
         $(this)
             .parent(".nav-item")
             .siblings()
             .children()
             .removeClass("active");
         $(this).addClass("active");
+        
+    //Toggle Sections
+        $('.block').hide();
+        $($(this).data('targets')).addClass('block').siblings().removeClass('block');
+        $($(this).data('targets')).fadeIn('slow');
     });
 
     // hieght video header
@@ -83,14 +87,6 @@ $(function() {
             },
             1000
         );
-    });
-
-    //Toggle Sections
-    $('.navbar-nav .nav-link').click(function (e) {
-         e.preventDefault();
-        $('.block').hide();
-        $($(this).data('targets')).addClass('block').siblings().removeClass('block');
-        $($(this).data('targets')).fadeIn('slow');
     });
     
     // Aos Start
