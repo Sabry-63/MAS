@@ -1,109 +1,123 @@
 /*global $, console */
 
 $(function() {
-    "use strict";
-    // active class nav
-    $(".navbar-nav .nav-link").click(function() {
-        $(this)
-            .parent(".nav-item")
-            .siblings()
-            .children()
-            .removeClass("active");
-        $(this).addClass("active");
-        
+  "use strict";
+  // active class nav
+  $(".navbar-nav .nav-link").click(function() {
+    $(this)
+      .parent(".nav-item")
+      .siblings()
+      .children()
+      .removeClass("active");
+    $(this).addClass("active");
+
     //Toggle Sections
-        $('.block').hide();
-        $($(this).data('targets')).addClass('block').siblings().removeClass('block');
-        $($(this).data('targets')).fadeIn('slow');
-    });
+    $(".block").hide();
+    $($(this).data("targets"))
+      .addClass("block")
+      .siblings()
+      .removeClass("block");
+    $($(this).data("targets")).fadeIn("slow");
 
-    // hieght video header
-    var winH = $(window).height(),
-        upperH = $(".upper-nav").innerHeight(),
-        navH = $(".navbar").innerHeight();
+    if ($(".men").hasClass("block")) {
+      $("body").addClass("men");
+      $("body").removeClass("women children");
+    } else if ($(".women").hasClass("block")) {
+      $("body").addClass("women");
+      $("body").removeClass("men children" );
+    } else if ($(".children").hasClass("block")) {
+      $("body").addClass("children");
+      $("body").removeClass("women men");
+    }
+  });
 
-    $(".mas-vid").height(winH - (upperH  + navH));
+  // hieght video header
+  var winH = $(window).height(),
+    upperH = $(".upper-nav").innerHeight(),
+    navH = $(".navbar").innerHeight();
 
-    // Slick Plagen
-    $(".slider").slick({
-        dots: false,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
+  $(".mas-vid").height(winH - (upperH + navH));
 
-    //Window Scroll
-    $(window).scroll(function() {
-        //scroll To Top Button
-        if ($(window).scrollTop() >= $(window).height()) {
-            $(".scroll-top i").fadeIn(500);
-        } else {
-            $(".scroll-top i").fadeOut(200);
+  // Slick Plagen
+  $(".slider").slick({
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
         }
-    });
-
-    // Pop up
-    $(".fa-times").click(function() {
-        $(".popup").fadeOut();
-    });
-    $(document).keydown(function(e) {
-        if (e.keyCode === 27) {
-            $(".popup").fadeOut();
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
-    });
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
 
-    //click button go to top
-    $(".scroll-top").click(function(event) {
-        event.preventDefault();
-        $("html, body").animate(
-            {
-                scrollTop: 0
-            },
-            1000
-        );
-    });
-    
-    // Aos Start
-     AOS.init();
-    
-    /* calling script */
-    $(".xzoom-5, .xzoom-gallery").xzoom({
-        lensShape: "circle",
-        zoomWidth: 250,
-        zoomHeight: 250,
-        tint: "#000",
-        tintOpacity: 0.5,
-        lensOpacity: 0.5,
-        mposition: "fullscreen",
-        scroll: true,
-        openOnSmall: true,
-        Xoffset: 5,
-        Yoffset: 3
-    });
+  //Window Scroll
+  $(window).scroll(function() {
+    //scroll To Top Button
+    if ($(window).scrollTop() >= $(window).height()) {
+      $(".scroll-top i").fadeIn(500);
+    } else {
+      $(".scroll-top i").fadeOut(200);
+    }
+  });
+
+  // Pop up
+  $(".fa-times").click(function() {
+    $(".popup").fadeOut();
+  });
+  $(document).keydown(function(e) {
+    if (e.keyCode === 27) {
+      $(".popup").fadeOut();
+    }
+  });
+
+  //click button go to top
+  $(".scroll-top").click(function(event) {
+    event.preventDefault();
+    $("html, body").animate(
+      {
+        scrollTop: 0
+      },
+      1000
+    );
+  });
+
+  // Aos Start
+  AOS.init();
+
+  /* calling script */
+  $(".xzoom-5, .xzoom-gallery").xzoom({
+    lensShape: "circle",
+    zoomWidth: 250,
+    zoomHeight: 250,
+    tint: "#000",
+    tintOpacity: 0.5,
+    lensOpacity: 0.5,
+    mposition: "fullscreen",
+    scroll: true,
+    openOnSmall: true,
+    Xoffset: 5,
+    Yoffset: 3
+  });
 });
