@@ -90,7 +90,7 @@ body.children .navbar-light .active::before {
   border-color: transparent transparent #5353b1 transparent !important;
 }
 body.children .products .items-products {
-  border-bottom: 1px solid #da4fd6;
+  border-bottom: 1px solid #5353b1;
 }
 body.children .children .items-products:hover {
   border: 1px solid #5353b1 !important;
